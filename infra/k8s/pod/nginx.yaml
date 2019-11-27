@@ -5,4 +5,23 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx
+    image: nginx:alpine
+    #imagePullPolicy: Always
+    # すでにあるコンテナイメージを利用
+    imagePullPolicy: IfNotPresent
+    command: []
+    args: ["nginx", "-g", "daemon off;"]
+    env:
+    - name: HOGEHOGE
+      value: fugafuga
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    workingDir: /tmp
+    resources:
+      requests:
+        cpu: 50m
+        memory: 8Mi
+      limits:
+        cpu: 200m
+        memory: 64Mi
