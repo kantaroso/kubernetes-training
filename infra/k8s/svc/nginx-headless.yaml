@@ -1,0 +1,9 @@
+# rsのpodの詳細まで外から知りたい時に使う？
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-headless
+spec:
+  selector:
+    app: nginx
+  clusterIP: None

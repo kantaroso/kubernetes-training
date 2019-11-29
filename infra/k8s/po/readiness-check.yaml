@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: readiness-check
+  labels:
+    app: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    readinessProbe:
+      httpGet:
+        port: 80
+        path: /
+      failureThreshold: 1
+      periodSeconds: 1
