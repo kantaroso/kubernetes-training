@@ -2,8 +2,8 @@
 
 ## 概要
 
-* [Kubernetes道場](https://cstoku.dev/posts/2018/k8sdojo-01/)を使って学習する
-
+* dojo / [Kubernetes道場](https://cstoku.dev/posts/2018/k8sdojo-01/)を使って学習する
+* sample_service / 簡単なサービスをk8sで構築する
 
 ## 環境構築
 
@@ -34,4 +34,10 @@ kubectl version
 # インストール & パスを通す
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64 \
   && sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+
+# スタート
+minikue start
+
+# ストップ
+minikue stop
 ```
