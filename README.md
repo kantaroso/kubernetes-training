@@ -36,8 +36,8 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin
   && sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 
 # スタート
-minikue start
+minikube start
 
 # ストップ
-minikue stop
+minikube stop
 ```
